@@ -706,7 +706,7 @@ const translations = {
         privacy: "Integritetspolicy",
         customize: "Anpassa",
         reject: "Avvisa alla",
-        accept: "Acceptera alla",
+        accept: "Acceptera",
         essential: "Nödvändiga Cookies",
         essentialDesc: "Nödvändiga för webbplatsens funktionalitet",
         analytics: "Analyscookies",
