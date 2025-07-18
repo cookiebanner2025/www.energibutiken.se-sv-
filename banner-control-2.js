@@ -295,30 +295,31 @@ window.uetq = window.uetq || [];
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 
-// Set default consent (deny all except security) AND initial GCS signal
+// Set default consent (grant all) AND initial GCS signal
 gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'analytics_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'personalization_storage': 'denied',
-    'functionality_storage': 'denied',
+    'ad_storage': 'granted',
+    'analytics_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'personalization_storage': 'granted',
+    'functionality_storage': 'granted',
     'security_storage': 'granted'
 });
 
 // Push initial GCS signal (G100) immediately after default consent
+// Push initial GCS signal (G111) immediately after default consent
 window.dataLayer.push({
     'event': 'initial_consent_state',
     'consent_mode': {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'personalization_storage': 'denied',
-        'functionality_storage': 'denied',
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'personalization_storage': 'granted',
+        'functionality_storage': 'granted',
         'security_storage': 'granted'
     },
-    'gcs': 'G100', // Explicit initial GCS signal
+    'gcs': 'G111', // Changed from G100 to G111
     'timestamp': new Date().toISOString()
 });
 
@@ -2715,4 +2716,3 @@ if (typeof window !== 'undefined') {
         config: config
     };
 }
-
